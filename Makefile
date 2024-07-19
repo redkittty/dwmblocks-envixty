@@ -29,9 +29,10 @@ install: dwmblocks
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwmblocks ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks
-	cp scripts/pacupdate /usr/bin/pacupdate
+	cp -f scripts/pacupdate ${DESTDIR}${PREFIX}/bin/pacupdate
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks
+	rm -f ${DESTDIR}${PREFIX}/bin/pacupdate
 
 .PHONY: all options clean install uninstall
